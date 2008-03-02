@@ -3,15 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>#!/usr/bin/env ruby
-</string>
+	<string>File.dirname(__FILE__)</string>
 	<key>name</key>
-	<string>#!/usr/bin/env ruby</string>
+	<string>File.dirname(__FILE__)</string>
 	<key>scope</key>
 	<string>source.ruby</string>
 	<key>tabTrigger</key>
-	<string>rb</string>
+	<string>filedn</string>
 	<key>uuid</key>
-	<string>A05CBDD6-845D-45EB-94FB-F8787F5456BE</string>
+	<string>30054E21-7FFE-446D-9660-A76808779709</string>
 </dict>
 </plist>
