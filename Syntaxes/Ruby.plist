@@ -250,6 +250,12 @@
 			<string>variable.language.ruby</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>\s+$</string>
+			<key>name</key>
+			<string>invalid.trailing-whitespace</string>
+		</dict>
+		<dict>
 			<key>comment</key>
 			<string> everything being a method but having a special function is a..</string>
 			<key>match</key>
