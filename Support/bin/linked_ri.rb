@@ -15,7 +15,7 @@ include ERB::Util
 
 tm_var_or_qri = 'RI=$(type -P ${TM_RUBY_RI:-qri})'
 ri_default    = '[[ ! -x "$RI" ]] && RI=$(type -P ri)'
-RI_EXE        = `#{tm_var_or_qri}; #{ri_default}; echo -n $RI`
+RI_EXE        = `#{tm_var_or_qri}; #{ri_default}; /bin/echo -n "$RI"`
 
 term = ARGV.shift
 
@@ -90,7 +90,7 @@ HTML
     ri(document.getElementById('search_history').value, true);
   }, false);
 </script>
-<div id="actual_output">#{documentation}</div>
+<div id="actual_output" style="margin-top: 3em">#{documentation}</div>
 HTML
   html_footer
   TextMate.exit_show_html

@@ -432,6 +432,7 @@
 			           (?&gt;[a-zA-Z_]\w*(?&gt;[?!]|=(?!&gt;))?                              # the method name
 			           |===?|&gt;[&gt;=]?|&lt;=&gt;|&lt;[&lt;=]?|[%&amp;`/\|]|\*\*?|=?~|[-+]@?|\[\]=?) )  # …or an operator method
 			         [ \t]                                                          # the space separating the arguments
+			         (?=[ \t]*[^\s#])                                               # make sure arguments and not a comment follow
 			        </string>
 			<key>beginCaptures</key>
 			<dict>
@@ -1722,6 +1723,53 @@
 				<dict>
 					<key>include</key>
 					<string>text.html.basic</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#interpolated_ruby</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(?&gt;&lt;&lt;-SQL\b)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.ruby</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>heredoc with embedded SQL and indented terminator</string>
+			<key>contentName</key>
+			<string>text.sql.embedded.ruby</string>
+			<key>end</key>
+			<string>\s*SQL$</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.ruby</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.unquoted.embedded.sql.ruby</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#heredoc</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.sql</string>
 				</dict>
 				<dict>
 					<key>include</key>
