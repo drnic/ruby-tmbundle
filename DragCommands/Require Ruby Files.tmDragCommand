@@ -5,7 +5,10 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>echo "require File.dirname(__FILE__) + '/$TM_DROPPED_FILE'"</string>
+	<string>#!/usr/bin/env ruby
+
+file_path = ENV['TM_DROPPED_FILE'].gsub(/\.rb$/, '')
+puts "require File.dirname(__FILE__) + '/#{file_path}'"</string>
 	<key>draggedFileExtensions</key>
 	<array>
 		<string>rb</string>
