@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+file_path = ENV['TM_DROPPED_FILE'].gsub(/\.rb$/, '')
+puts "require File.dirname(__FILE__) + '/#{file_path}'"</string>
+	<key>draggedFileExtensions</key>
+	<array>
+		<string>rb</string>
+	</array>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Require Ruby Files</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>uuid</key>
+	<string>0FA9B84F-CC58-4C0F-A5F0-3E6A67ECB6FE</string>
+</dict>
+</plist>
