@@ -63,6 +63,8 @@
 			<string>D94AD09E-ADF4-47C9-8236-C7B38B44804E</string>
 			<string>803A6BDF-D74A-4B69-AFF0-98B824AB478D</string>
 			<string>2765038A-1CFC-4BBD-B19C-6EB2B400D528</string>
+			<string>6A819296-4AFF-4CD2-AF37-DE2705AF1A1A</string>
+			<string>7C42D878-FD0F-4181-A71A-57A091C0154A</string>
 		</array>
 		<key>submenus</key>
 		<dict>
@@ -127,6 +129,18 @@
 				</array>
 				<key>name</key>
 				<string>Arrays</string>
+			</dict>
+			<key>6A819296-4AFF-4CD2-AF37-DE2705AF1A1A</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>16920DC1-6FA6-48C8-90C5-C19E2C734303</string>
+					<string>------------------------------------</string>
+					<string>FAFE9F5C-BF9C-4416-8623-2CB8EBC31B3C</string>
+					<string>005EB926-4BFE-4BFA-93B2-C9030636289C</string>
+				</array>
+				<key>name</key>
+				<string>File</string>
 			</dict>
 			<key>6EA7AE06-3EA9-497D-A6DE-732DE43DA6E9</key>
 			<dict>
