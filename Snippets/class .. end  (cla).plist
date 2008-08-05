@@ -6,7 +6,7 @@
 	<string>class ${1:`#!/usr/bin/env ruby
     require 'rubygems'
     require "active_support"
-    puts ENV['TM_FILENAME'].gsub(/\.rb$/, '').camelize.singularize
+    puts (ENV['TM_FILENAME'] || 'some_model.rb').gsub(/\.rb$/, '').camelize.singularize
 	`}
 	$0
 end</string>
