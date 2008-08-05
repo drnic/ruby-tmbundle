@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>namespace ${1::name} do
+
+	desc ${2:"${3:default task for namespace $1}"}
+	task :default do
+		$0
+	end
+
+end</string>
+	<key>name</key>
+	<string>namespace :name ... task :default ... end</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>namespace</string>
+	<key>uuid</key>
+	<string>2031FC41-CBD3-41CC-B9A9-7F068E607A05</string>
+</dict>
+</plist>
