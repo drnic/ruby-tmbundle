@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>require File.dirname(__FILE__) + "/test_helper"
+
+require "${1:`#!/usr/bin/env ruby
+    require 'rubygems'
+    require "active_support"
+    puts ENV['TM_FILENAME'].gsub(/\.rb$/, '').gsub(/^test_/,'').gsub(/_test$/,'')
+	`}"
+
+class Test${2:${1/([\w&amp;&amp;[^_]]+)|./\u$1/g}} &lt; Test::Unit::TestCase
+	def test_${3:case_name}
+		$0
+	end
+end</string>
+	<key>name</key>
+	<string>class .. &lt; Test::Unit::TestCase with test_helper</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>tch</string>
+	<key>uuid</key>
+	<string>228CAB3A-E221-4727-B430-31E94F76C9D3</string>
+</dict>
+</plist>
