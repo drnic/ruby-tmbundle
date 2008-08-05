@@ -8,7 +8,7 @@
 require "${1:`#!/usr/bin/env ruby
     require 'rubygems'
     require "active_support"
-    puts ENV['TM_FILENAME'].gsub(/\.rb$/, '').gsub(/^test_/,'').gsub(/_test$/,'')
+    puts (ENV['TM_FILENAME'] || 'test_some_model.rb').gsub(/\.rb$/, '').gsub(/^test_/,'').gsub(/_test$/,'')
 	`}"
 
 class Test${2:${1/([\w&amp;&amp;[^_]]+)|./\u$1/g}} &lt; Test::Unit::TestCase
