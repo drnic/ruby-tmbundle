@@ -51,6 +51,7 @@
 		<string>rjs</string>
 		<string>Rakefile</string>
 		<string>rake</string>
+		<string>sake</string>
 		<string>cgi</string>
 		<string>fcgi</string>
 		<string>gemspec</string>
