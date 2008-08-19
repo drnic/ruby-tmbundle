@@ -66,6 +66,7 @@
 			<string>803A6BDF-D74A-4B69-AFF0-98B824AB478D</string>
 			<string>2765038A-1CFC-4BBD-B19C-6EB2B400D528</string>
 			<string>6A819296-4AFF-4CD2-AF37-DE2705AF1A1A</string>
+			<string>228CAB3A-E221-4727-B430-31E94F76C9D3</string>
 		</array>
 		<key>submenus</key>
 		<dict>
@@ -326,6 +327,7 @@
 					<string>F686E1AD-B03D-45A6-BD51-6E3FD1298FE0</string>
 					<string>CB81DA55-F3BC-4BFB-B0C5-29F0EE6F8081</string>
 					<string>FE9A8EDA-C243-4068-8F38-A615B82D08C9</string>
+					<string>E07FF68B-C87D-4332-8477-D026929FDADA</string>
 				</array>
 				<key>name</key>
 				<string>Rake</string>
@@ -457,6 +459,7 @@
 		<string>97054C4D-E4A3-45B1-9C00-B82DBCB30CAD</string>
 		<string>6519CB08-8326-4B77-A251-54722FFBFC1F</string>
 		<string>47D203ED-EB9B-4653-A07B-A897800CEB76</string>
+		<string>E07FF68B-C87D-4332-8477-D026929FDADA</string>
 		<string>7990EE60-C850-4779-A8C0-7FD2C853B99B</string>
 		<string>121B334B-2AA6-4E9A-A8B8-BF93B627982B</string>
 		<string>58FDEA60-10AF-4C49-AA09-29B77030DB25</string>
