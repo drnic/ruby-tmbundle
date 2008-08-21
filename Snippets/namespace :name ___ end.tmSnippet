@@ -3,20 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>class ${1:`#!/usr/bin/env ruby
-    require 'rubygems'
-    require "active_support"
-    puts (ENV['TM_FILENAME'] || 'some_model.rb').gsub(/\.rb$/, '').camelize.singularize
-	`}
+	<string>namespace ${1::name} do
+
 	$0
+
 end</string>
 	<key>name</key>
-	<string>class .. end</string>
+	<string>namespace :name ... end</string>
 	<key>scope</key>
 	<string>source.ruby</string>
 	<key>tabTrigger</key>
-	<string>cla</string>
+	<string>namespace</string>
 	<key>uuid</key>
-	<string>BF487539-8085-4FF4-8601-1AD20FABAEDC</string>
+	<string>A3D89AAA-9156-4077-A026-37BB7358C3BA</string>
 </dict>
 </plist>

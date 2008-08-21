@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby -w
+
+unless ENV["TM_FILEPATH"]
+  puts &lt;&lt;-SIMPLE_SNIPPET
+# NOTE: if you save this file first it will create a
+# namespaced rake/sake task based on the file's
+# path within the project
+task ${1::${2:task_name}} do
+  $0
+end
+  SIMPLE_SNIPPET
+  exit
+end
+
+def indent_str
+  "\t" * @indent
+end
+
+relative_filepath = ENV["TM_FILEPATH"].
+  gsub(ENV["TM_PROJECT_DIRECTORY"], '').
+  gsub(/^\/?/,'').
+  gsub(/\.[sr]ake$/, '')
+task_name, *reverse_namespaces = relative_filepath.split(/[\/\\]/).reverse
+namespaces = reverse_namespaces.reverse
+@indent = 0
+namespaces.each do |namespace|
+  puts "#{indent_str}namespace '#{namespace}' do"
+  @indent += 1
+end
+
+puts &lt;&lt;-TASK_SNIPPET
+#{indent_str}${2:desc "${1:This task ...}"
+#{indent_str}}task :#{task_name} do
+#{indent_str}  $0
+#{indent_str}end
+TASK_SNIPPET
+
+reverse_namespaces.each_with_index do |namespace, index|
+  @indent -= 1
+  puts "#{indent_str}end"
+end</string>
+	<key>fallbackInput</key>
+	<string>none</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>name</key>
+	<string>Rake/Sake task using file path</string>
+	<key>output</key>
+	<string>insertAsSnippet</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>task</string>
+	<key>uuid</key>
+	<string>E07FF68B-C87D-4332-8477-D026929FDADA</string>
+</dict>
+</plist>

@@ -3,20 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>class ${1:`#!/usr/bin/env ruby
-    require 'rubygems'
-    require "active_support"
-    puts (ENV['TM_FILENAME'] || 'some_model.rb').gsub(/\.rb$/, '').camelize.singularize
-	`}
-	$0
-end</string>
+	<string>File.read(${1:filename})$0</string>
 	<key>name</key>
-	<string>class .. end</string>
+	<string>File.read(filename)</string>
 	<key>scope</key>
 	<string>source.ruby</string>
 	<key>tabTrigger</key>
-	<string>cla</string>
+	<string>filer</string>
 	<key>uuid</key>
-	<string>BF487539-8085-4FF4-8601-1AD20FABAEDC</string>
+	<string>FAFE9F5C-BF9C-4416-8623-2CB8EBC31B3C</string>
 </dict>
 </plist>

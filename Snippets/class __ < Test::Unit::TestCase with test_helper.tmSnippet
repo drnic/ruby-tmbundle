@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>require "test/unit"
+	<string>require File.dirname(__FILE__) + "/test_helper"
 
 require "${1:`#!/usr/bin/env ruby
     require 'rubygems'
@@ -17,12 +17,12 @@ class Test${2:${1/([\w&amp;&amp;[^_]]+)|./\u$1/g}} &lt; Test::Unit::TestCase
 	end
 end</string>
 	<key>name</key>
-	<string>class .. &lt; Test::Unit::TestCase .. end</string>
+	<string>class .. &lt; Test::Unit::TestCase with test_helper</string>
 	<key>scope</key>
 	<string>source.ruby</string>
 	<key>tabTrigger</key>
-	<string>tc</string>
+	<string>tch</string>
 	<key>uuid</key>
-	<string>31D1F145-33AB-4441-BA11-4D1C46928C4C</string>
+	<string>228CAB3A-E221-4727-B430-31E94F76C9D3</string>
 </dict>
 </plist>
