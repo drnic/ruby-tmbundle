@@ -29,6 +29,8 @@ relative_filepath = ENV["TM_FILEPATH"].
   gsub(/\.[sr]ake$/, '')
 task_name, *reverse_namespaces = relative_filepath.split(/[\/\\]/).reverse
 namespaces = reverse_namespaces.reverse
+namespaces = namespaces[1..-1] if namespaces.first == 'lib'
+namespaces = namespaces[1..-1] if namespaces.first == 'tasks'
 @indent = 0
 namespaces.each do |namespace|
   puts "#{indent_str}namespace '#{namespace}' do"
@@ -42,7 +44,7 @@ puts &lt;&lt;-TASK_SNIPPET
 #{indent_str}end
 TASK_SNIPPET
 
-reverse_namespaces.each_with_index do |namespace, index|
+namespaces.reverse.each_with_index do |namespace, index|
   @indent -= 1
   puts "#{indent_str}end"
 end</string>
