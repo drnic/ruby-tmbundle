@@ -1784,6 +1784,53 @@
 		</dict>
 		<dict>
 			<key>begin</key>
+			<string>(?&gt;&lt;&lt;-OBJC\b)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.ruby</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>heredoc with embedded Objective-C and indented terminator</string>
+			<key>contentName</key>
+			<string>source.objc.embedded.ruby</string>
+			<key>end</key>
+			<string>\s*OBJC$</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.ruby</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.unquoted.embedded.objective-c.ruby</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#heredoc</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>source.objc</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#interpolated_ruby</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#escaped_char</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
 			<string>(?&gt;&lt;&lt;-(["\\']?)(\w+_(?i:eval))\1)</string>
 			<key>beginCaptures</key>
 			<dict>
