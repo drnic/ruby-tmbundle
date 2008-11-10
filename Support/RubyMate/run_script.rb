@@ -12,11 +12,12 @@ if is_test_script and not ENV['TM_FILE_IS_UNTITLED']
   path_ary = (ENV['TM_ORIG_FILEPATH'] || ENV['TM_FILEPATH']).split("/")
   if index = path_ary.rindex("test")
     test_path = File.join(*path_ary[0..-2])
+    test_parent_path = File.join(*path_ary[0..(path_ary.rindex('test'))])
     lib_path  = File.join( *( path_ary[0..-2] +
                               [".."] * (path_ary.length - index - 1) ) +
                               ["lib"] )
     if File.exist? lib_path
-      cmd << "-I#{lib_path}:#{test_path}"
+      cmd << "-I#{lib_path}:#{test_path}:#{test_parent_path}"
     end
   end
 end
