@@ -259,6 +259,14 @@
 			<string>keyword.other.special-method.ruby</string>
 		</dict>
 		<dict>
+			<key>comment</key>
+			<string>keywords associated with state machine DSLs</string>
+			<key>match</key>
+			<string>\b(state_machine|event|before_transition|after_transition|transition)\b(?![?!])</string>
+			<key>name</key>
+			<string>keyword.other.special-method.state_machine.ruby</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>\b(require)\b</string>
 			<key>captures</key>
