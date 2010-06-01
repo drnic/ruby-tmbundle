@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+require ENV['TM_SUPPORT_PATH'] + '/lib/textmate'
+
+compiler_ruby = `which rbx`.strip
+if compiler_ruby.length == 0
+  compiler_ruby = ENV['TM_RUBY'] || `which ruby`.strip
+end
+
+result = `#{compiler_ruby} -wc "$TM_FILEPATH" 2&gt;&amp;1`
+print result
+TextMate.go_to :line =&gt; $1 if result =~ /:(\d+):/
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>@s</string>
+	<key>name</key>
+	<string>Validate and Save</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>uuid</key>
+	<string>E0E058FC-0DC3-4872-A1C2-0B1A322A0CF5</string>
+</dict>
+</plist>
