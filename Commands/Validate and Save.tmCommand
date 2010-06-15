@@ -27,7 +27,7 @@ TextMate.go_to :line =&gt; $1 if result =~ /:(\d+):/
 	<key>output</key>
 	<string>showAsTooltip</string>
 	<key>scope</key>
-	<string>source.ruby</string>
+	<string>source.ruby - text source.ruby</string>
 	<key>uuid</key>
 	<string>E0E058FC-0DC3-4872-A1C2-0B1A322A0CF5</string>
 </dict>
