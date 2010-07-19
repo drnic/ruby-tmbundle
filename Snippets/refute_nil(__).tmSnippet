@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>refute_nil`snippet_paren.rb`${0:instance}`snippet_paren.rb end`</string>
+	<key>name</key>
+	<string>refute_nil(..)</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>ren</string>
+	<key>uuid</key>
+	<string>F1DAD1EA-9F20-4BDC-9891-679C18F1A067</string>
+</dict>
+</plist>

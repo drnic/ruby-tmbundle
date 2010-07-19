@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>${1:mock} = MiniTest::Mock.new</string>
+	<key>name</key>
+	<string>MiniTest Mock</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>mmo</string>
+	<key>uuid</key>
+	<string>B6E835A7-76E2-4865-8B6A-3F266EB92E3B</string>
+</dict>
+</plist>

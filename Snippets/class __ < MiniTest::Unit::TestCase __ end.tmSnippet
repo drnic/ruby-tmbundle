@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>require "minitest/unit"
+require "minitest/mock"
+MiniTest::Unit.autorun
+
+require "${1:`#!/usr/bin/env ruby
+    require 'rubygems'
+    require "active_support"
+    puts (ENV['TM_FILENAME'] || 'test_some_model.rb').gsub(/\.rb$/, '').gsub(/^test_/,'').gsub(/_test$/,'')
+	`}"
+
+class Test${2:${1/([\w&amp;&amp;[^_]]+)|./\u$1/g}} &lt; MiniTest::Unit::TestCase
+	def test_${3:case_name}
+		$0
+	end
+end</string>
+	<key>name</key>
+	<string>class .. &lt; MiniTest::Unit::TestCase .. end</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>mtc</string>
+	<key>uuid</key>
+	<string>3ED0B275-2DC3-4EC8-AE37-4944DBF934C2</string>
+</dict>
+</plist>

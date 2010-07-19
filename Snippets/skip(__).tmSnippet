@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>skip`snippet_paren.rb`"${0:Skip message.}"`snippet_paren.rb end`</string>
+	<key>name</key>
+	<string>skip(..)</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>sk</string>
+	<key>uuid</key>
+	<string>04256E22-BC51-4351-A644-C6622B2EE396</string>
+</dict>
+</plist>

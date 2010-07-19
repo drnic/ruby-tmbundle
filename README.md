@@ -3,6 +3,8 @@ Ruby TextMate bundle
 
 The TextMate bundle that first appeared in the famous "Rails 15 minute video." This is it, many years later.
 
+This fork adds support for [MiniTest](http://github.com/seattlerb/minitest) which is the new standard testing library in Ruby 1.9.
+
 Installation
 ============
 
@@ -10,10 +12,10 @@ To install via Git:
 
     mkdir -p ~/Library/Application\ Support/TextMate/Bundles
     cd ~/Library/Application\ Support/TextMate/Bundles
-    git clone git://github.com/drnic/ruby-tmbundle.git "Ruby.tmbundle"
+    git clone git://github.com/blinklys/ruby-tmbundle.git "Ruby.tmbundle"
     osascript -e 'tell app "TextMate" to reload bundles'
 
-Source can be viewed or forked via GitHub: [http://github.com/drnic/ruby-tmbundle](http://github.com/drnic/ruby-tmbundle)
+Source can be viewed or forked via GitHub: [http://github.com/blinklys/ruby-tmbundle](http://github.com/blinklys/ruby-tmbundle)
 
 Validate and Save
 =================
@@ -36,6 +38,6 @@ Then in TextMate, add your homebrew `bin` folder to the $PATH.
 * Go to "Advanced", then "Shell Variables"
 * Edit the `PATH` variable, and add ":/path/to/homebrew/bin"
 
-For example, if you have homebrew installed in `~/.homebrew` then you might add `:/Users/drnic/.homebrew/bin`
+For example, if you have homebrew installed in `~/.homebrew` then you might add `:/Users/blinklys/.homebrew/bin`
 
 Save a dodgy Ruby file and see the beautifully helpful syntax message.

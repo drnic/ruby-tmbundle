@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>refute_same`snippet_paren.rb`${1:expected}, ${0:actual}`snippet_paren.rb end`</string>
+	<key>name</key>
+	<string>refute_same(..)</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>res</string>
+	<key>uuid</key>
+	<string>99436827-9D19-48A7-82F8-D36F46525FC8</string>
+</dict>
+</plist>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>require File.dirname(__FILE__) + "/spec_helper"
+
+require "${1:`#!/usr/bin/env ruby
+    require 'rubygems'
+    require "active_support"
+    puts (ENV['TM_FILENAME'] || 'spec_some_model.rb').gsub(/\.rb$/, '').gsub(/^spec_/,'').gsub(/_spec$/,'')
+	`}"
+
+describe ${2:${1/([\w&amp;&amp;[^_]]+)|./\u$1/g}} do
+	it "${4:should ${3:..}}" do
+		$0
+	end
+end</string>
+	<key>name</key>
+	<string>MiniTest Spec with spec_helper</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>msph</string>
+	<key>uuid</key>
+	<string>F1EDE730-2457-40B1-B134-F8178116C309</string>
+</dict>
+</plist>

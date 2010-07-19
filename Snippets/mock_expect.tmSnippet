@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>${1:mock}.expect :${2:message}, :${3:return_value}</string>
+	<key>name</key>
+	<string>mock.expect</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>mmoe</string>
+	<key>uuid</key>
+	<string>C3EB56F5-E69B-4CFF-A8B3-34EC51432FBC</string>
+</dict>
+</plist>

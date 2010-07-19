@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>describe "${1:..}" do
+	$0
+end</string>
+	<key>name</key>
+	<string>describe ".." do .. end</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>mdes</string>
+	<key>uuid</key>
+	<string>1A302CA0-398B-4860-BBAA-3CD5447674F7</string>
+</dict>
+</plist>
