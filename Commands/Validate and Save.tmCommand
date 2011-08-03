@@ -15,8 +15,11 @@ if compiler_ruby.length == 0
 end
 
 result = `#{compiler_ruby} -wc "$TM_FILEPATH" 2&gt;&amp;1`
-print result
-TextMate.go_to :line =&gt; $1 if result =~ /:(\d+):/
+if result =~ /:(\d+):/
+  print result
+  TextMate.go_to :line =&gt; $1
+end
+
 </string>
 	<key>input</key>
 	<string>document</string>
