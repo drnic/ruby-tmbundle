@@ -58,7 +58,7 @@ TextMate::Executor.run(cmd, :version_args => ["--version"]) do |str, type|
       out.join()
     else
       htmlize(str)
-    end    
+    end
   when :err
     "<span style=\"color: red\">#{htmlize str}</span>"
   end
