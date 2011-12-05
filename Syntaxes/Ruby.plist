@@ -5,7 +5,6 @@
 	<key>comment</key>
 	<string>
 	TODO: unresolved issues
-
 	text:
 	"p &lt;&lt; end
 	print me!
@@ -20,13 +19,13 @@
 	• Nested heredocs are not really supportable at present
 
 	text:
-	print &lt;&lt;-'THERE' 
-	This is single quoted. 
-	The above used #{Time.now} 
-	THERE 
+	print &lt;&lt;-'THERE'
+	This is single quoted.
+	The above used #{Time.now}
+	THERE
 	symtoms:
 	From Programming Ruby p306; should be a non-interpolated heredoc.
-	
+
 	text:
 	"a\332a"
 	symptoms:
@@ -46,9 +45,7 @@
 </string>
 	<key>fileTypes</key>
 	<array>
-		<string>rb</string>
 		<string>rbx</string>
-		<string>rjs</string>
 		<string>Rakefile</string>
 		<string>rake</string>
 		<string>sake</string>
@@ -254,9 +251,17 @@
 			<key>comment</key>
 			<string> everything being a method but having a special function is a..</string>
 			<key>match</key>
-			<string>\b(initialize|new|loop|include|extend|raise|attr_reader|attr_writer|attr_accessor|attr|catch|throw|private|module_function|public|protected)\b(?![?!])</string>
+			<string>\b(initialize|new|loop|include|extend|raise|attr_reader|attr_writer|attr_accessor|attr|catch|throw|module_function|private|protected|public)\b(?![?!])</string>
 			<key>name</key>
 			<string>keyword.other.special-method.ruby</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>highlight annotation words</string>
+			<key>match</key>
+			<string>^.*?\b(private|protected|public)\b$\n</string>
+			<key>name</key>
+			<string>keyword.other.annotation.ruby</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -1611,11 +1616,11 @@
 			?\C-a    ?\M-a    ?\C-\M-\C-\M-a
 
 			examples (4th alternation = normal):
-			?a       ?A       ?0 
-			?*       ?"       ?( 
+			?a       ?A       ?0
+			?*       ?"       ?(
 			?.       ?#
-			
-			
+
+
 			the negative lookbehind prevents against matching
 			p(42.tainted?)
 			</string>
