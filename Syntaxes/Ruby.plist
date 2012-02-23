@@ -259,7 +259,7 @@
 			<key>comment</key>
 			<string>highlight annotation words</string>
 			<key>match</key>
-			<string>^.*?\b(private|protected|public)\b$\n</string>
+			<string>^[\s]*?\b(private|protected|public)\b[\s]*$\n</string>
 			<key>name</key>
 			<string>keyword.other.annotation.ruby</string>
 		</dict>
