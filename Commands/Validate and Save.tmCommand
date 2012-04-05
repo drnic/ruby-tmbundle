@@ -17,6 +17,11 @@ end
 result = `#{compiler_ruby} -wc "$TM_FILEPATH" 2&gt;&amp;1`
 
 scopes = ENV['TM_SCOPE'].split
+
+if scopes.include? 'source.ruby.rspec'
+  result.gsub!(/^.+warning: possibly useless use of == in void context$/, '')
+end
+
 if scopes.include? 'source.ruby.rspec.cucumber.steps'
   result.gsub!(/^.+warning: ambiguous first argument; put parentheses or even spaces$/, '')
 end
