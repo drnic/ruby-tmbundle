@@ -35,6 +35,9 @@ TextMate::Executor.run(cmd, :version_args => ["--version"]) do |str, type|
         if line =~ /^(\s+)(\S.*?):(\d+)(?::in\s*`(.*?)')?/
           indent, file, line, method = $1, $2, $3, $4
           url, display_name = '', 'untitled document';
+          unless file =~ /^\//
+            file = File.join(ENV['TM_PROJECT_DIRECTORY'], file) 
+          end
           unless file == "-"
             indent += " " if file.sub!(/^\[/, "")
             url = '&amp;url=file://' + e_url(file)
