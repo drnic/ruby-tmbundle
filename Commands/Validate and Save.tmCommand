@@ -29,6 +29,7 @@ if scopes.include? 'source.ruby.rspec.cucumber.steps'
 end
 
 if result =~ /:(\d+):/
+  puts `#{compiler_ruby} -v`
   print result
   TextMate.go_to :line =&gt; $1
 end
