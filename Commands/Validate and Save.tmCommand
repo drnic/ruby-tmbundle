@@ -9,6 +9,8 @@
 
 require ENV['TM_SUPPORT_PATH'] + '/lib/textmate'
 
+exit if STDIN.readline =~ /\A#\W?no-?verify/i
+
 compiler_ruby = `which rbx`.strip
 if compiler_ruby.length == 0
   compiler_ruby = ENV['TM_RUBY'] || `which ruby`.strip
@@ -27,6 +29,7 @@ if scopes.include? 'source.ruby.rspec.cucumber.steps'
 end
 
 if result =~ /:(\d+):/
+  puts `#{compiler_ruby} -v`
   print result
   TextMate.go_to :line =&gt; $1
 end
